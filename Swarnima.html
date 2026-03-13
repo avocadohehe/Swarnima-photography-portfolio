@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -248,6 +248,99 @@ lightbox.style.display="none";
 }
 
 </script>
+<section id="feedback">
+
+<style>
+
+#feedback{
+padding:80px 10%;
+text-align:center;
+}
+
+.feedback-title{
+font-size:32px;
+margin-bottom:30px;
+}
+
+.feedback-form{
+max-width:500px;
+margin:auto;
+}
+
+.feedback-form input,
+.feedback-form textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:6px;
+font-size:15px;
+}
+
+.feedback-form button{
+padding:12px 20px;
+background:#ff9800;
+border:none;
+color:white;
+font-size:16px;
+cursor:pointer;
+border-radius:6px;
+transition:0.3s;
+}
+
+.feedback-form button:hover{
+background:#e68900;
+}
+
+#successMessage{
+display:none;
+color:lightgreen;
+margin-top:15px;
+}
+
+</style>
+
+
+<h2 class="feedback-title">Send Your Feedback</h2>
+
+<div class="feedback-form">
+
+<form id="feedbackForm">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea rows="5" placeholder="Write your feedback..." required></textarea>
+
+<button type="submit">Submit Feedback</button>
+
+</form>
+
+<p id="successMessage">Thank you! Your feedback has been submitted.</p>
+
+</div>
+
+
+<script>
+
+const form=document.getElementById("feedbackForm");
+const message=document.getElementById("successMessage");
+
+form.addEventListener("submit",function(event){
+
+event.preventDefault();
+
+message.style.display="block";
+
+form.reset();
+
+});
+
+</script>
+
+</section>
 
 </body>
+</html>
 </html>
