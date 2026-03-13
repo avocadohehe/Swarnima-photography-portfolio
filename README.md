@@ -205,9 +205,16 @@ background:black;
 <div class="about">
 
 <p>
-Hello! My name is Swarnima. I am passionate about photography and love
-capturing nature, landscapes, and creative moments. Through photography
-I try to tell stories and preserve beautiful memories.
+Hello! My name is Swarnima and I am a first-year MSBTE student currently pursuing my diploma. 
+I have a strong interest in creativity and visual arts. Photography is one of my favorite hobbies 
+because it allows me to capture beautiful moments, nature, and everyday life through my perspective. 
+
+Along with photography, I also enjoy art and creative design. I like exploring different styles, 
+colors, and compositions that help me express ideas visually. Creating this photography portfolio 
+website is part of my learning journey where I combine my interest in technology and creativity.
+
+Through this website, I want to showcase my passion for photography and share the beauty of 
+captured moments with others while also improving my web development skills.
 </p>
 
 </div>
