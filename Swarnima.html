@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Photography Portfolio</title>
 
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#111;
+    color:white;
+}
+
+header{
+    background:black;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-size:18px;
+}
+
+nav a:hover{
+    color:orange;
+}
+
+.hero{
+    height:60vh;
+    background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    font-weight:bold;
+}
+
+section{
+    padding:40px;
+    text-align:center;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+form{
+    max-width:400px;
+    margin:auto;
+}
+
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    padding:10px 20px;
+    background:orange;
+    border:none;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+footer{
+    background:black;
+    padding:10px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>My Photography</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#gallery">Gallery</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+Capturing Moments
+</div>
+
+<section id="gallery">
+<h2>Gallery</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d">
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+<img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e">
+</div>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<p>
+Hello! I am a passionate photographer who loves capturing nature,
+people and special moments. This portfolio showcases some of my
+favorite photographs.
+</p>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button type="submit">Send</button>
+</form>
+
+</section>
+
+<footer>
+<p>© 2026 My Photography Portfolio</p>
+</footer>
+
+</body>
+</html>
