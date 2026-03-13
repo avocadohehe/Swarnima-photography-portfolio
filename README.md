@@ -1,1 +1,0 @@
-# Swarnima-s-photography-portfolio
