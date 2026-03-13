@@ -3,149 +3,251 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Photography Portfolio</title>
+
+<title>Swarnima Photography</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
 <style>
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#111;
-    color:white;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
 }
 
+body{
+background:#111;
+color:white;
+}
+
+/* Header */
+
 header{
-    background:black;
-    padding:15px;
-    text-align:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:black;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:24px;
+font-weight:600;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    font-size:18px;
+margin-left:30px;
+text-decoration:none;
+color:white;
+transition:0.3s;
 }
 
 nav a:hover{
-    color:orange;
+color:#ff9800;
 }
+
+/* Hero */
 
 .hero{
-    height:60vh;
-    background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:40px;
-    font-weight:bold;
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover;
 }
+
+.hero h1{
+font-size:65px;
+}
+
+.hero p{
+font-size:20px;
+margin-top:10px;
+}
+
+/* Section */
 
 section{
-    padding:40px;
-    text-align:center;
+padding:80px 10%;
 }
 
+.section-title{
+text-align:center;
+font-size:35px;
+margin-bottom:40px;
+}
+
+/* Gallery */
+
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .gallery img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:10px;
-    transition:0.3s;
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:10px;
+cursor:pointer;
+transition:0.4s;
 }
 
 .gallery img:hover{
-    transform:scale(1.05);
+transform:scale(1.08);
 }
 
-form{
-    max-width:400px;
-    margin:auto;
+/* Lightbox */
+
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
 }
 
-input,textarea{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
-    border:none;
-    border-radius:5px;
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
 }
 
-button{
-    padding:10px 20px;
-    background:orange;
-    border:none;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
+.lightbox span{
+position:absolute;
+top:20px;
+right:40px;
+font-size:40px;
+cursor:pointer;
 }
+
+/* About */
+
+.about{
+max-width:700px;
+margin:auto;
+text-align:center;
+line-height:1.8;
+}
+
+/* Footer */
 
 footer{
-    background:black;
-    padding:10px;
-    text-align:center;
+text-align:center;
+padding:20px;
+background:black;
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>My Photography</h1>
+
+<div class="logo">Swarnima Photography</div>
+
 <nav>
 <a href="#home">Home</a>
 <a href="#gallery">Gallery</a>
 <a href="#about">About</a>
-<a href="#contact">Contact</a>
 </nav>
+
 </header>
 
-<div class="hero" id="home">
-Capturing Moments
-</div>
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<h1>Swarnima</h1>
+<p>Capturing the Beauty of the World</p>
+
+</section>
+
+<!-- GALLERY -->
 
 <section id="gallery">
-<h2>Gallery</h2>
+
+<h2 class="section-title">My Gallery</h2>
 
 <div class="gallery">
+
 <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d">
 <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
 <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
 <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
 <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
 <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
+
 </div>
+
 </section>
+
+<!-- ABOUT -->
 
 <section id="about">
-<h2>About Me</h2>
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
 <p>
-Hello! I am a passionate photographer who loves capturing nature,
-people and special moments. This portfolio showcases some of my
-favorite photographs.
+Hello! My name is Swarnima. I am passionate about photography and love
+capturing nature, landscapes, and creative moments. Through photography
+I try to tell stories and preserve beautiful memories.
 </p>
-</section>
 
-<section id="contact">
-<h2>Contact Me</h2>
-
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea rows="4" placeholder="Your Message"></textarea>
-<button type="submit">Send</button>
-</form>
+</div>
 
 </section>
 
 <footer>
-<p>© 2026 My Photography Portfolio</p>
+
+<p>© 2026 Swarnima Photography Portfolio</p>
+
 </footer>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+<span onclick="closeLightbox()">&times;</span>
+
+<img id="lightbox-img">
+
+</div>
+
+<script>
+
+const images=document.querySelectorAll(".gallery img");
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
+
+images.forEach(img=>{
+img.addEventListener("click",()=>{
+lightbox.style.display="flex";
+lightboxImg.src=img.src;
+});
+});
+
+function closeLightbox(){
+lightbox.style.display="none";
+}
+
+</script>
 
 </body>
 </html>
