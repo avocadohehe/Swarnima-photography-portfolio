@@ -3,74 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swarnima Photography Portfolio</title>
+<title>Swarnima | Photography Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-font-family:Arial, sans-serif;
+*{
 margin:0;
-background:#111;
-color:white;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
+body{
+background:#0f0f0f;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* Header */
+
 header{
-background:black;
-padding:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:20px 60px;
+background:black;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-header h1{
-margin:0;
+.logo{
+font-size:26px;
+font-weight:600;
+letter-spacing:1px;
 }
 
 nav a{
-color:white;
+margin-left:30px;
 text-decoration:none;
-margin:15px;
-font-size:18px;
+color:white;
+font-size:16px;
+transition:0.3s;
 }
 
 nav a:hover{
-color:orange;
+color:#f39c12;
 }
+
+/* Hero */
 
 .hero{
-height:70vh;
+height:90vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-font-size:40px;
-background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
+text-align:center;
+background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover;
 }
 
-section{
-padding:50px;
-text-align:center;
+.hero h1{
+font-size:60px;
+letter-spacing:3px;
 }
+
+.hero p{
+font-size:20px;
+margin-top:10px;
+}
+
+/* Section */
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+margin-bottom:40px;
+}
+
+/* Gallery */
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
+gap:20px;
 }
 
 .gallery img{
 width:100%;
-height:250px;
+height:260px;
 object-fit:cover;
-border-radius:10px;
+border-radius:12px;
 cursor:pointer;
-transition:0.3s;
+transition:0.4s;
 }
 
 .gallery img:hover{
-transform:scale(1.05);
+transform:scale(1.07);
 }
 
-/* Popup Lightbox */
+/* Lightbox */
 
 .lightbox{
 display:none;
@@ -87,21 +125,43 @@ align-items:center;
 .lightbox img{
 max-width:90%;
 max-height:90%;
+border-radius:10px;
 }
 
 .lightbox span{
 position:absolute;
-top:20px;
+top:25px;
 right:40px;
 font-size:40px;
 cursor:pointer;
-color:white;
 }
 
-footer{
-background:black;
-padding:10px;
+/* About */
+
+.about{
+max-width:700px;
+margin:auto;
 text-align:center;
+line-height:1.8;
+font-size:18px;
+}
+
+/* Contact */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+font-size:18px;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
 }
 
 </style>
@@ -110,7 +170,8 @@ text-align:center;
 <body>
 
 <header>
-<h1>Swarnima Photography</h1>
+
+<div class="logo">Swarnima Photography</div>
 
 <nav>
 <a href="#home">Home</a>
@@ -118,14 +179,23 @@ text-align:center;
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
-<div class="hero" id="home">
-Capturing Beautiful Moments
-</div>
+<!-- Hero -->
+
+<section class="hero" id="home">
+
+<h1>Swarnima</h1>
+<p>Capturing Moments Through My Lens</p>
+
+</section>
+
+<!-- Gallery -->
 
 <section id="gallery">
-<h2>My Gallery</h2>
+
+<h2 class="section-title">My Photography</h2>
 
 <div class="gallery">
 
@@ -140,22 +210,36 @@ Capturing Beautiful Moments
 
 </section>
 
+<!-- About -->
+
 <section id="about">
 
-<h2>About Me</h2>
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
 
 <p>
-Hello! My name is Swarnima. I am passionate about photography and love capturing
-nature, people and special moments through my lens.
+Hello! I am Swarnima, a passionate photographer who loves capturing
+nature, portraits, and creative moments. Photography allows me to tell
+stories through images and preserve beautiful memories.
 </p>
+
+</div>
 
 </section>
 
+<!-- Contact -->
+
 <section id="contact">
 
-<h2>Contact</h2>
+<h2 class="section-title">Contact</h2>
+
+<div class="contact">
 
 <p>Email: swarnima@email.com</p>
+<p>Instagram: @swarnima.photography</p>
+
+</div>
 
 </section>
 
@@ -165,11 +249,13 @@ nature, people and special moments through my lens.
 
 </footer>
 
-<!-- Lightbox popup -->
+<!-- Lightbox -->
 
 <div class="lightbox" id="lightbox">
+
 <span onclick="closeLightbox()">&times;</span>
 <img id="lightbox-img">
+
 </div>
 
 <script>
