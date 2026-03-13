@@ -214,41 +214,7 @@ I try to tell stories and preserve beautiful memories.
 
 </section>
 
-<footer>
-
-<p>© 2026 Swarnima Photography Portfolio</p>
-
-</footer>
-
-<!-- LIGHTBOX -->
-
-<div class="lightbox" id="lightbox">
-
-<span onclick="closeLightbox()">&times;</span>
-
-<img id="lightbox-img">
-
-</div>
-
-<script>
-
-const images=document.querySelectorAll(".gallery img");
-const lightbox=document.getElementById("lightbox");
-const lightboxImg=document.getElementById("lightbox-img");
-
-images.forEach(img=>{
-img.addEventListener("click",()=>{
-lightbox.style.display="flex";
-lightboxImg.src=img.src;
-});
-});
-
-function closeLightbox(){
-lightbox.style.display="none";
-}
-
-</script>
-<section id="feedback">
+  <section id="feedback">
 
 <style>
 
@@ -340,6 +306,42 @@ form.reset();
 </script>
 
 </section>
+
+<footer>
+
+<p>© 2026 Swarnima Photography Portfolio</p>
+
+</footer>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+<span onclick="closeLightbox()">&times;</span>
+
+<img id="lightbox-img">
+
+</div>
+
+<script>
+
+const images=document.querySelectorAll(".gallery img");
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
+
+images.forEach(img=>{
+img.addEventListener("click",()=>{
+lightbox.style.display="flex";
+lightboxImg.src=img.src;
+});
+});
+
+function closeLightbox(){
+lightbox.style.display="none";
+}
+
+</script>
+
 
 </body>
 </html>
