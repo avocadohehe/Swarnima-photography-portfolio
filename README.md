@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swarnima | Photography Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Swarnima Photography</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,13 +14,12 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins;
 }
 
 body{
-background:#0f0f0f;
+background:#111;
 color:white;
-scroll-behavior:smooth;
 }
 
 /* Header */
@@ -32,25 +32,22 @@ padding:20px 60px;
 background:black;
 position:sticky;
 top:0;
-z-index:1000;
 }
 
 .logo{
-font-size:26px;
+font-size:24px;
 font-weight:600;
-letter-spacing:1px;
 }
 
 nav a{
 margin-left:30px;
 text-decoration:none;
 color:white;
-font-size:16px;
 transition:0.3s;
 }
 
 nav a:hover{
-color:#f39c12;
+color:#ff9800;
 }
 
 /* Hero */
@@ -66,8 +63,7 @@ background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") c
 }
 
 .hero h1{
-font-size:60px;
-letter-spacing:3px;
+font-size:65px;
 }
 
 .hero p{
@@ -83,7 +79,7 @@ padding:80px 10%;
 
 .section-title{
 text-align:center;
-font-size:36px;
+font-size:35px;
 margin-bottom:40px;
 }
 
@@ -99,13 +95,13 @@ gap:20px;
 width:100%;
 height:260px;
 object-fit:cover;
-border-radius:12px;
+border-radius:10px;
 cursor:pointer;
 transition:0.4s;
 }
 
 .gallery img:hover{
-transform:scale(1.07);
+transform:scale(1.08);
 }
 
 /* Lightbox */
@@ -130,7 +126,7 @@ border-radius:10px;
 
 .lightbox span{
 position:absolute;
-top:25px;
+top:20px;
 right:40px;
 font-size:40px;
 cursor:pointer;
@@ -143,17 +139,6 @@ max-width:700px;
 margin:auto;
 text-align:center;
 line-height:1.8;
-font-size:18px;
-}
-
-/* Contact */
-
-.contact{
-text-align:center;
-}
-
-.contact p{
-font-size:18px;
 }
 
 /* Footer */
@@ -177,25 +162,24 @@ background:black;
 <a href="#home">Home</a>
 <a href="#gallery">Gallery</a>
 <a href="#about">About</a>
-<a href="#contact">Contact</a>
 </nav>
 
 </header>
 
-<!-- Hero -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
 <h1>Swarnima</h1>
-<p>Capturing Moments Through My Lens</p>
+<p>Capturing the Beauty of the World</p>
 
 </section>
 
-<!-- Gallery -->
+<!-- GALLERY -->
 
 <section id="gallery">
 
-<h2 class="section-title">My Photography</h2>
+<h2 class="section-title">My Gallery</h2>
 
 <div class="gallery">
 
@@ -205,12 +189,14 @@ background:black;
 <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
 <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
 <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
 
 </div>
 
 </section>
 
-<!-- About -->
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -219,25 +205,10 @@ background:black;
 <div class="about">
 
 <p>
-Hello! I am Swarnima, a passionate photographer who loves capturing
-nature, portraits, and creative moments. Photography allows me to tell
-stories through images and preserve beautiful memories.
+Hello! My name is Swarnima. I am passionate about photography and love
+capturing nature, landscapes, and creative moments. Through photography
+I try to tell stories and preserve beautiful memories.
 </p>
-
-</div>
-
-</section>
-
-<!-- Contact -->
-
-<section id="contact">
-
-<h2 class="section-title">Contact</h2>
-
-<div class="contact">
-
-<p>Email: swarnima@email.com</p>
-<p>Instagram: @swarnima.photography</p>
 
 </div>
 
@@ -249,25 +220,26 @@ stories through images and preserve beautiful memories.
 
 </footer>
 
-<!-- Lightbox -->
+<!-- LIGHTBOX -->
 
 <div class="lightbox" id="lightbox">
 
 <span onclick="closeLightbox()">&times;</span>
+
 <img id="lightbox-img">
 
 </div>
 
 <script>
 
-const images = document.querySelectorAll(".gallery img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
+const images=document.querySelectorAll(".gallery img");
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
 
 images.forEach(img=>{
 img.addEventListener("click",()=>{
 lightbox.style.display="flex";
-lightboxImg.src = img.src;
+lightboxImg.src=img.src;
 });
 });
 
